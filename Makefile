@@ -6,5 +6,3 @@ run:
 	./gradlew run
 check-updates:
 	./gradlew dependencyUpdates
-
-

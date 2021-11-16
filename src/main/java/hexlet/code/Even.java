@@ -7,8 +7,8 @@ public class Even {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         Scanner whatsYourName = new Scanner(System.in);
-        String nameUser = whatsYourName.nextLine();
-        System.out.println("Hello, " + nameUser + "!");
+        String nameOfUser = whatsYourName.nextLine();
+        System.out.println("Hello, " + nameOfUser + "!");
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         int rightAnswer = 0;
@@ -27,9 +27,9 @@ public class Even {
             } else if (randomNumber % 2 != 0 && !"no".equals(answer)
                     || randomNumber % 2 == 0 && !"yes".equals(answer)) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\n"
-                        + "Let's try again, " + nameUser + "!");
+                        + "Let's try again, " + nameOfUser + "!");
             }
         }
-        System.out.println("Congratulations, " + nameUser + "!");
+        System.out.println("Congratulations, " + nameOfUser + "!");
     }
 }

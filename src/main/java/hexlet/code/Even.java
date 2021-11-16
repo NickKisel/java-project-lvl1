@@ -6,8 +6,8 @@ public class Even {
     public static void parityCheck(Even even) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        Scanner whatsYourName = new Scanner(System.in);
-        String nameOfUser = whatsYourName.nextLine();
+        Scanner nameAsk = new Scanner(System.in);
+        String nameOfUser = nameAsk.nextLine();
         System.out.println("Hello, " + nameOfUser + "!");
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");

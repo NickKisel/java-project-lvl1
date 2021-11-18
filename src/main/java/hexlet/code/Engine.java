@@ -8,14 +8,6 @@ public class Engine {
         return randomNumber;
     }
 
-    public static int correctChecker(String correct) {
-        int valueOfCorrectAnswers = 0;
-        if ("Correct!".equals(correct)) {
-            valueOfCorrectAnswers++;
-        }
-        return valueOfCorrectAnswers;
-    }
-
     public static int checkAnswer(String value, String answer, int rightAnswer, String nameOfUser) {
         if (value.equals(answer)) {
             rightAnswer++;

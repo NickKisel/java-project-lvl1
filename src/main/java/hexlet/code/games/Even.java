@@ -1,12 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Scanner;
 
 public class Even {
     public static void parityCheck() {
-        String nameOfUser = Greeting.greetingsUser();
+        String nameOfUser = Cli.greetingsUser();
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         int rightAnswer = 0;

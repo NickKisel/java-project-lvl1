@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Calc {
     public static void calculation() {
         String nameOfUser = Cli.greetingsUser();
+
         System.out.println("What is the result of the expression?");
         int rightAnswer = 0;
         final int answersForWin = 3;

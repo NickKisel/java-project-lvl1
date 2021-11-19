@@ -4,3 +4,4 @@
 [![Java CI](https://github.com/NickKisel/java-project-lvl1/actions/workflows/Java-CI.yml/badge.svg)](https://github.com/NickKisel/java-project-lvl1/actions/workflows/Java-CI.yml/badge.svg)
 https://asciinema.org/a/cd9ZeOjk58GAHvF1WuksI20Ae
 https://asciinema.org/a/RdwSfip08aummkmgpalmraBLE
+https://asciinema.org/a/KD9eIasHrmrD8v6IUhZNGbcbv

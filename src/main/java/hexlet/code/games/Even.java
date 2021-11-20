@@ -14,7 +14,7 @@ public class Even {
         final int answersForWin = 3;
         Scanner scanner = new Scanner(System.in);
         Engine gameTwo = new Engine();
-        while (rightAnswer < answersForWin) {
+        for (int i = 0; i < answersForWin; i++) {
             int randomNumber = gameTwo.createRandomNumber();
             gameTwo.getQuestion(Integer.toString(randomNumber));
             String answer = scanner.nextLine();

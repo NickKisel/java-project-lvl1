@@ -14,7 +14,7 @@ public class Prime {
         final int answersForWin = 3;
         Scanner scanner = new Scanner(System.in);
         Engine gameSix = new Engine();
-        while (rightAnswer < answersForWin) {
+        for (int i = 0; i < answersForWin; i++) {
             int randomNumber = gameSix.createRandomNumber();
 
             gameSix.getQuestion(Integer.toString(randomNumber));

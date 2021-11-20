@@ -18,7 +18,7 @@ public class Calc {
         Scanner scanner = new Scanner(System.in);
         Random mathSign = new Random();
         Engine gameThree = new Engine();
-        while (rightAnswer < answersForWin) {
+        for (int i = 0; i < answersForWin; i++) {
             int firstRandomNumber = gameThree.createRandomNumber();
             int secondRandomNumber = gameThree.createRandomNumber();
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));

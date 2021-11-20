@@ -15,7 +15,7 @@ public class Progression {
         final int answersForWin = 3;
         Scanner scanner = new Scanner(System.in);
         Engine gameFive = new Engine();
-        while (rightAnswer < answersForWin) {
+        for (int i = 0; i < answersForWin; i++) {
             int firstElementOfArray = gameFive.createRandomNumber();
             int progressionStep = gameFive.createRandomNumber();
             int[] intArrayOfProgression = getIntArray(firstElementOfArray, progressionStep);
@@ -23,7 +23,7 @@ public class Progression {
             int replacement = getReplacement(strArrayOfProgression.length);
             strArrayOfProgression[replacement] = "..";
 
-            gameFive.getQuestion(Arrays.toString(strArrayOfProgression));
+            gameFive.getQuestion(Arrays.toString(strArrayOfProgression).replace('[', ' ').replace(']', ' ').trim());
             String answer = scanner.nextLine();
             String value = Integer.toString(intArrayOfProgression[replacement]);
             gameFive.getAnswer(answer);

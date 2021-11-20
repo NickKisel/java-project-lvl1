@@ -14,7 +14,7 @@ public class GCD {
         final int answersForWin = 3;
         Scanner scanner = new Scanner(System.in);
         Engine gameFour = new Engine();
-        while (rightAnswer < answersForWin) {
+        for (int i = 0; i < answersForWin; i++) {
             int firstRandomNumber = gameFour.createRandomNumber();
             int secondRandomNumber = gameFour.createRandomNumber();
 

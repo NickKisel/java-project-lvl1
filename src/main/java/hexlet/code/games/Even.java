@@ -28,8 +28,8 @@ public class Even {
 
     private static String yesOrNo(int number) {
         if (number % 2 == 0) {
-            return "no";
+            return "yes";
         }
-        return "yes";
+        return "no";
     }
 }

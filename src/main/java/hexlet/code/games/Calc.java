@@ -23,8 +23,7 @@ public class Calc {
             int secondRandomNumber = gameThree.createRandomNumber();
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));
 
-            String question = firstRandomNumber + " " + operator + " " + secondRandomNumber;
-            gameThree.getQuestion(question);
+            gameThree.getQuestion(firstRandomNumber + " " + operator + " " + secondRandomNumber);
             String answer = scanner.nextLine();
             String value = getValue(firstRandomNumber, secondRandomNumber, operator);
             gameThree.getAnswer(answer);

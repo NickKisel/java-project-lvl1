@@ -16,17 +16,17 @@ public class Even {
         Engine gameTwo = new Engine();
         while (rightAnswer < answersForWin) {
             int randomNumber = gameTwo.createRandomNumber();
-            System.out.println("Question: " + randomNumber);
+            gameTwo.getQuestion(Integer.toString(randomNumber));
             String answer = scanner.nextLine();
-            System.out.println("Your answer: " + answer);
+            gameTwo.getAnswer(answer);
             String value = yesOrNo(randomNumber);
 
             rightAnswer = gameTwo.checkAnswer(value, answer, rightAnswer, nameOfUser);
         }
-        System.out.println("Congratulations, " + nameOfUser + "!");
+        gameTwo.congratulation(nameOfUser);
     }
 
-    public static String yesOrNo(int number) {
+    private static String yesOrNo(int number) {
         if (number % 2 == 0) {
             return "yes";
         }

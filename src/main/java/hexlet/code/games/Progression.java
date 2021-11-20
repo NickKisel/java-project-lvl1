@@ -32,24 +32,24 @@ public class Progression {
             int replacement = getReplacement(strArrayOfProgression.length);
             strArrayOfProgression[replacement] = "..";
 
-            System.out.println("Question: " + Arrays.toString(strArrayOfProgression));
+            gameFive.getQuestion(Arrays.toString(strArrayOfProgression));
             String answer = scanner.nextLine();
             String value = Integer.toString(intArrayOfProgression[replacement]);
-            System.out.println("Your answer: " + answer);
+            gameFive.getAnswer(answer);
 
             rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
         }
-        System.out.println("Congratulations, " + nameOfUser + "!");
+        gameFive.congratulation(nameOfUser);
     }
 
-    public static int getArrayLength() {
+    private static int getArrayLength() {
         final int lowerLine = 5;
         final int upperLine = 11;
         int arrayLength = (int) (lowerLine + Math.random() * upperLine);
         return arrayLength;
     }
 
-    public static int getReplacement(int arrayLength) {
+    private static int getReplacement(int arrayLength) {
         final int lowerLine = 0;
         final int upperLine = arrayLength - 1;
         int replacement = (int) (lowerLine + Math.random() * upperLine);

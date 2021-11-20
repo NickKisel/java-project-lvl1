@@ -30,6 +30,7 @@ public class App {
                 break;
             case "5":
                 Progression.gameProgression();
+                break;
             case "6":
                 Prime.gamePrime();
                 break;

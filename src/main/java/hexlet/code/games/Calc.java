@@ -23,10 +23,11 @@ public class Calc {
             int secondRandomNumber = gameThree.createRandomNumber();
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));
 
-            System.out.println("Question: " + firstRandomNumber + " " + operator + " " + secondRandomNumber);
+            String question = firstRandomNumber + " " + operator + " " + secondRandomNumber;
+            gameThree.getQuestion(question);
             String answer = scanner.nextLine();
             String value;
-            System.out.println("Your answer: " + answer);
+            gameThree.getAnswer(answer);
             switch (operator) {
                 case '+':
                     value = Integer.toString(firstRandomNumber + secondRandomNumber);
@@ -44,6 +45,6 @@ public class Calc {
                     break;
             }
         }
-        System.out.println("Congratulations, " + nameOfUser + "!");
+        gameThree.congratulation(nameOfUser);
     }
 }

@@ -24,10 +24,10 @@ public class Prime {
 
             rightAnswer = gameSix.checkAnswer(value, answer, rightAnswer, nameOfUser);
         }
-        System.out.println("Congratulations, " + nameOfUser + "!");
+        gameSix.congratulation(nameOfUser);
     }
 
-    public static String getPrime(int number) {
+    private static String getPrime(int number) {
         int flagTwo = 2;
         if (number % flagTwo == 0 && number != flagTwo || number < flagTwo) {
             return "no";

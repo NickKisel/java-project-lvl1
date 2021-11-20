@@ -24,4 +24,7 @@ public class Engine {
     public static void getAnswer(String answer) {
         System.out.println("Your answer: " + answer);
     }
+    public static void congratulation(String nameOfUser) {
+        System.out.println("Congratulations, " + nameOfUser + "!");
+    }
 }

@@ -18,17 +18,18 @@ public class GCD {
             int firstRandomNumber = gameFour.createRandomNumber();
             int secondRandomNumber = gameFour.createRandomNumber();
 
-            System.out.println("Question: " + firstRandomNumber + " " + secondRandomNumber);
+            String question = firstRandomNumber + " " + secondRandomNumber;
+            gameFour.getQuestion(question);
             String answer = scanner.nextLine();
             String value = Integer.toString(getGCD(firstRandomNumber, secondRandomNumber));
-            System.out.println("Your answer: " + answer);
+            gameFour.getAnswer(answer);
 
             rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
         }
-        System.out.println("Congratulations, " + nameOfUser + "!");
+        gameFour.congratulation(nameOfUser);
     }
 
-    public static int getGCD(int first, int second) {
+    private static int getGCD(int first, int second) {
         if (first > second) {
             while (second != 0) {
                 int remainder = first % second;

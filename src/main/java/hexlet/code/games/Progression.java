@@ -16,19 +16,10 @@ public class Progression {
         Scanner scanner = new Scanner(System.in);
         Engine gameFive = new Engine();
         while (rightAnswer < answersForWin) {
-            int arrayLength = getArrayLength();
-            int[] intArrayOfProgression = new int[arrayLength];
-            int progressionStep = gameFive.createRandomNumber();
             int firstElementOfArray = gameFive.createRandomNumber();
-            intArrayOfProgression[0] = firstElementOfArray;
-            for (int i = 1; i < intArrayOfProgression.length; i++) {
-                intArrayOfProgression[i] = intArrayOfProgression[i - 1] + progressionStep;
-            }
-
-            String[] strArrayOfProgression = new String[arrayLength];
-            for (int j = 0; j < strArrayOfProgression.length; j++) {
-                strArrayOfProgression[j] = Integer.toString(intArrayOfProgression[j]);
-            }
+            int progressionStep = gameFive.createRandomNumber();
+            int[] intArrayOfProgression = getIntArray(firstElementOfArray, progressionStep);
+            String[] strArrayOfProgression = getStringArray(intArrayOfProgression.length, intArrayOfProgression);
             int replacement = getReplacement(strArrayOfProgression.length);
             strArrayOfProgression[replacement] = "..";
 
@@ -54,5 +45,20 @@ public class Progression {
         final int upperLine = arrayLength - 1;
         int replacement = (int) (lowerLine + Math.random() * upperLine);
         return replacement;
+    }
+    private static int[] getIntArray(int firstElementOfArray, int progressionStep) {
+        int[] intArray = new int[getArrayLength()];
+        intArray[0] = firstElementOfArray;
+        for (int i = 1; i < intArray.length; i++) {
+            intArray[i] = intArray[i - 1] + progressionStep;
+        }
+        return intArray;
+    }
+    private static String[] getStringArray(int length, int[] intArray) {
+        String[] strArray = new String[length];
+        for (int j = 0; j < strArray.length; j++) {
+            strArray[j] = Integer.toString(intArray[j]);
+        }
+        return strArray;
     }
 }

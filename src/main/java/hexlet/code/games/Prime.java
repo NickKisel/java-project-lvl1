@@ -16,6 +16,7 @@ public class Prime {
         Engine gameSix = new Engine();
         while (rightAnswer < answersForWin) {
             int randomNumber = gameSix.createRandomNumber();
+
             System.out.println("Question: " + randomNumber);
             String answer = scanner.nextLine();
             System.out.println("Your answer: " + answer);

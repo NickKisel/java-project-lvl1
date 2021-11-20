@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Progression {
@@ -23,7 +22,7 @@ public class Progression {
             int replacement = getReplacement(strArrayOfProgression.length);
             strArrayOfProgression[replacement] = "..";
 
-            gameFive.getQuestion(Arrays.toString(strArrayOfProgression).replace('[', ' ').replace(']', ' ').trim());
+            gameFive.getQuestion(printArray(strArrayOfProgression).toString());
             String answer = scanner.nextLine();
             String value = Integer.toString(intArrayOfProgression[replacement]);
             gameFive.getAnswer(answer);
@@ -67,5 +66,13 @@ public class Progression {
             strArray[j] = Integer.toString(intArray[j]);
         }
         return strArray;
+    }
+    private static StringBuilder printArray(String[] array) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            sb.append(array[i]);
+            sb.append(" ");
+        }
+        return sb;
     }
 }

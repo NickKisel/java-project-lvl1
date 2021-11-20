@@ -20,6 +20,7 @@ public class Even {
             String answer = scanner.nextLine();
             System.out.println("Your answer: " + answer);
             String value = yesOrNo(randomNumber);
+
             rightAnswer = gameTwo.checkAnswer(value, answer, rightAnswer, nameOfUser);
         }
         System.out.println("Congratulations, " + nameOfUser + "!");

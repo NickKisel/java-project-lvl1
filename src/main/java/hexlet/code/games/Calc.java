@@ -22,6 +22,7 @@ public class Calc {
             int firstRandomNumber = gameThree.createRandomNumber();
             int secondRandomNumber = gameThree.createRandomNumber();
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));
+
             System.out.println("Question: " + firstRandomNumber + " " + operator + " " + secondRandomNumber);
             String answer = scanner.nextLine();
             String value;

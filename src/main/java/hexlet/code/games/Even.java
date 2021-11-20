@@ -16,11 +16,9 @@ public class Even {
         Engine gameTwo = new Engine();
         while (rightAnswer < answersForWin) {
             int randomNumber = gameTwo.createRandomNumber();
-            System.out.println("Question: " + randomNumber);
-//            gameTwo.getQuestion(Integer.toString(randomNumber));
+            gameTwo.getQuestion(Integer.toString(randomNumber));
             String answer = scanner.nextLine();
-//            gameTwo.getAnswer(answer);
-            System.out.println("Your answer: " + answer);
+            gameTwo.getAnswer(answer);
             String value = yesOrNo(randomNumber);
 
             rightAnswer = gameTwo.checkAnswer(value, answer, rightAnswer, nameOfUser);

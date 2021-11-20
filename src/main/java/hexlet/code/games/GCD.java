@@ -25,8 +25,13 @@ public class GCD {
             gameFour.getAnswer(answer);
 
             rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
+            if (rightAnswer == -1) {
+                break;
+            }
         }
-        gameFour.congratulation(nameOfUser);
+        if (rightAnswer == answersForWin) {
+            gameFour.congratulation(nameOfUser);
+        }
     }
 
     private static int getGCD(int numberOne, int numberTwo) {

@@ -22,8 +22,13 @@ public class Even {
             String value = yesOrNo(randomNumber);
 
             rightAnswer = gameTwo.checkAnswer(value, answer, rightAnswer, nameOfUser);
+            if (rightAnswer == -1) {
+                break;
+            }
         }
-        gameTwo.congratulation(nameOfUser);
+        if (rightAnswer == answersForWin) {
+            gameTwo.congratulation(nameOfUser);
+        }
     }
 
     private static String yesOrNo(int number) {

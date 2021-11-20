@@ -29,8 +29,13 @@ public class Progression {
             gameFive.getAnswer(answer);
 
             rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
+            if (rightAnswer == -1) {
+                break;
+            }
         }
-        gameFive.congratulation(nameOfUser);
+        if (rightAnswer == answersForWin) {
+            gameFive.congratulation(nameOfUser);
+        }
     }
 
     private static int getArrayLength() {

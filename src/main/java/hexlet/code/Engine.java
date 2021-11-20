@@ -15,6 +15,7 @@ public class Engine {
         } else {
             System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'"
                     + value + "'.\n" + "Let's try again, " + nameOfUser + "!");
+            return -1;
         }
         return rightAnswer;
     }

@@ -30,8 +30,13 @@ public class Calc {
             gameThree.getAnswer(answer);
 
             rightAnswer = gameThree.checkAnswer(value, answer, rightAnswer, nameOfUser);
+            if (rightAnswer == -1) {
+                break;
+            }
         }
-        gameThree.congratulation(nameOfUser);
+        if (rightAnswer == answersForWin) {
+            gameThree.congratulation(nameOfUser);
+        }
     }
 
     private static String getValue(int firstRandomNumber, int secondRandomNumber, char operator) {

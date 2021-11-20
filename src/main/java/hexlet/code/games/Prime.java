@@ -23,8 +23,13 @@ public class Prime {
             String value = getPrime(randomNumber);
 
             rightAnswer = gameSix.checkAnswer(value, answer, rightAnswer, nameOfUser);
+            if (rightAnswer == -1) {
+                break;
+            }
         }
-        gameSix.congratulation(nameOfUser);
+        if (rightAnswer == answersForWin) {
+            gameSix.congratulation(nameOfUser);
+        }
     }
 
     private static String getPrime(int number) {

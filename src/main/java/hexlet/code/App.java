@@ -15,7 +15,11 @@ public class App {
         Scanner choiceGameScanner = new Scanner(System.in);
         String choiceGameStr = choiceGameScanner.nextLine();
         System.out.println("Your choice: " + choiceGameStr);
-        switch (choiceGameStr) {
+        runGame(choiceGameStr);
+    }
+
+    private static void runGame(String choice) {
+        switch (choice) {
             case "1":
                 Cli.greetingsUser();
                 break;

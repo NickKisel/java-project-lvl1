@@ -33,6 +33,7 @@ public class Calc {
         }
         gameThree.congratulation(nameOfUser);
     }
+
     private static String getValue(int firstRandomNumber, int secondRandomNumber, char operator) {
         String value = "";
         switch (operator) {

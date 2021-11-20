@@ -46,6 +46,7 @@ public class Progression {
         int replacement = (int) (lowerLine + Math.random() * upperLine);
         return replacement;
     }
+
     private static int[] getIntArray(int firstElementOfArray, int progressionStep) {
         int[] intArray = new int[getArrayLength()];
         intArray[0] = firstElementOfArray;
@@ -54,6 +55,7 @@ public class Progression {
         }
         return intArray;
     }
+
     private static String[] getStringArray(int length, int[] intArray) {
         String[] strArray = new String[length];
         for (int j = 0; j < strArray.length; j++) {

@@ -29,23 +29,25 @@ public class GCD {
         gameFour.congratulation(nameOfUser);
     }
 
-    private static int getGCD(int first, int second) {
-        if (first > second) {
-            while (second != 0) {
-                int remainder = first % second;
-                first = second;
-                second = remainder;
-            }
-            return first;
-        }
-        if (second > first) {
-            while (first != 0) {
-                int remainder = second % first;
-                second = first;
-                first = remainder;
-            }
-            return second;
+    private static int getGCD(int numberOne, int numberTwo) {
+        int sum = numberOne + numberTwo;
+        int first = getGreaterNumber(numberOne, numberTwo);
+        int second = sum - first;
+        while (second != 0) {
+            int remainder = first % second;
+            first = second;
+            second = remainder;
         }
         return first;
+    }
+
+    private static int getGreaterNumber(int first, int second) {
+        int greater = 0;
+        if (first > second) {
+            greater = first;
+        } else {
+            greater = second;
+        }
+        return greater;
     }
 }

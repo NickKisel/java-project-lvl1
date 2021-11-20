@@ -27,7 +27,7 @@ public class Even {
         gameTwo.congratulation(nameOfUser);
     }
 
-    private static String yesOrNo(int number) {
+    public static String yesOrNo(int number) {
         if (number % 2 == 0) {
             return "yes";
         }

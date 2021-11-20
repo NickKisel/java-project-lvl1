@@ -17,9 +17,9 @@ public class Prime {
         while (rightAnswer < answersForWin) {
             int randomNumber = gameSix.createRandomNumber();
 
-            System.out.println("Question: " + randomNumber);
+            gameSix.getQuestion(Integer.toString(randomNumber));
             String answer = scanner.nextLine();
-            System.out.println("Your answer: " + answer);
+            gameSix.getAnswer(answer);
             String value = getPrime(randomNumber);
 
             rightAnswer = gameSix.checkAnswer(value, answer, rightAnswer, nameOfUser);
@@ -29,10 +29,8 @@ public class Prime {
 
     public static String getPrime(int number) {
         int flagTwo = 2;
-        if (number == flagTwo) {
-            return "yes";
-        }
-        if (number % flagTwo == 0 || number < flagTwo) {
+
+        if (number % flagTwo == 0 && number != flagTwo || number < flagTwo) {
             return "no";
         }
         int divider = 1 + flagTwo;

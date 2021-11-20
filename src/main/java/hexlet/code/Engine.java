@@ -18,4 +18,10 @@ public class Engine {
         }
         return rightAnswer;
     }
+    public static void getQuestion(String question) {
+        System.out.println("Question: " + question);
+    }
+    public static void getAnswer(String answer) {
+        System.out.println("Your answer: " + answer);
+    }
 }

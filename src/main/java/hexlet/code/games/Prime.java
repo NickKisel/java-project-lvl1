@@ -31,7 +31,7 @@ public class Prime {
         if (number == flagTwo) {
             return "yes";
         }
-        if (number % 2 == 0 || number < flagTwo) {
+        if (number % flagTwo == 0 || number < flagTwo) {
             return "no";
         }
         int divider = 1 + flagTwo;

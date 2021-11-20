@@ -26,25 +26,28 @@ public class Calc {
             String question = firstRandomNumber + " " + operator + " " + secondRandomNumber;
             gameThree.getQuestion(question);
             String answer = scanner.nextLine();
-            String value;
+            String value = getValue(firstRandomNumber, secondRandomNumber, operator);
             gameThree.getAnswer(answer);
-            switch (operator) {
-                case '+':
-                    value = Integer.toString(firstRandomNumber + secondRandomNumber);
-                    rightAnswer = gameThree.checkAnswer(value, answer, rightAnswer, nameOfUser);
-                    break;
-                case '-':
-                    value = Integer.toString(firstRandomNumber - secondRandomNumber);
-                    rightAnswer = gameThree.checkAnswer(value, answer, rightAnswer, nameOfUser);
-                    break;
-                case '*':
-                    value = Integer.toString(firstRandomNumber * secondRandomNumber);
-                    rightAnswer = gameThree.checkAnswer(value, answer, rightAnswer, nameOfUser);
-                    break;
-                default:
-                    break;
-            }
+
+            rightAnswer = gameThree.checkAnswer(value, answer, rightAnswer, nameOfUser);
         }
         gameThree.congratulation(nameOfUser);
+    }
+    private static String getValue(int firstRandomNumber, int secondRandomNumber, char operator) {
+        String value = "";
+        switch (operator) {
+            case '+':
+                value = Integer.toString(firstRandomNumber + secondRandomNumber);
+                break;
+            case '-':
+                value = Integer.toString(firstRandomNumber - secondRandomNumber);
+                break;
+            case '*':
+                value = Integer.toString(firstRandomNumber * secondRandomNumber);
+                break;
+            default:
+                break;
+        }
+        return value;
     }
 }

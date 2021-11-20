@@ -40,7 +40,7 @@ public class Progression {
 
     private static int getArrayLength() {
         final int lowerLine = 6;
-        final int upperLine = 11;
+        final int upperLine = 1;
         int arrayLength = (int) (lowerLine + Math.random() * upperLine);
         return arrayLength;
     }

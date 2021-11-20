@@ -3,8 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bf8a73f7c16a996879c7/maintainability)](https://codeclimate.com/github/NickKisel/java-project-lvl1/maintainability)
 [![Java CI](https://github.com/NickKisel/java-project-lvl1/actions/workflows/Java-CI.yml/badge.svg)](https://github.com/NickKisel/java-project-lvl1/actions/workflows/Java-CI.yml/badge.svg)
 
-https://asciinema.org/a/cd9ZeOjk58GAHvF1WuksI20Ae
-https://asciinema.org/a/RdwSfip08aummkmgpalmraBLE
-https://asciinema.org/a/KD9eIasHrmrD8v6IUhZNGbcbv
-https://asciinema.org/a/sizY5Zu4quoe4olerEJYiYU0Y
-https://asciinema.org/a/a8l8Ltqkn8OYZ4BHPPoWJsrY8
+https://asciinema.org/a/aRocKEF86JGjXSHBNSbIjTDcx
+https://asciinema.org/a/Olfu5Xkb1gZ5VkRsYWTW6h3A4
+https://asciinema.org/a/3xwnSyxXUgObuRGhU71PPfOFF
+https://asciinema.org/a/rETk8Symu9ZP5PPAge1iodKfu
+https://asciinema.org/a/1ErX8XAsO0vZIZTyLdN6ZdCBR

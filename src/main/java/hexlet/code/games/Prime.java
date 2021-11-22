@@ -33,7 +33,7 @@ public class Prime {
     private static String getPrime(int number) {
         int flagTwo = 2;
         int divider = 1 + flagTwo;
-        while (divider < number) {
+        while (divider < number && number % 2 != 0) {
             if (number % divider == 0) {
                 return "no";
             }

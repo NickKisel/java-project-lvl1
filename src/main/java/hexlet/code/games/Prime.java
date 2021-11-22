@@ -31,8 +31,8 @@ public class Prime {
     public static String getPrime(int number) {
         int flagTwo = 2;
         int divider = 1 + flagTwo;
-        while (divider < number || number == 1) {
-            if (number % divider == 0 || number % flagTwo == 0 || number == 1) {
+        while (divider < number || number < flagTwo) {
+            if (number % divider == 0 || number % flagTwo == 0 || number < flagTwo) {
                 return "no";
             }
             divider += flagTwo;

@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-//import java.util.Scanner;
-
 public class Prime {
     public static void gamePrime() {
         String nameOfUser = Cli.greetingsUser();

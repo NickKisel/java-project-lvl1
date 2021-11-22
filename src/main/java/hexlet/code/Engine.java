@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     public static int createRandomNumber() {
-        final int lowerLine = 1;
+        int lowerLine = 1;
         final int upperLine = 30;
         int randomNumber = (int) (lowerLine + Math.random() * upperLine);
         return randomNumber;

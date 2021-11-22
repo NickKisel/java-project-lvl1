@@ -12,16 +12,12 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         int rightAnswer = 0;
         final int answersForWin = 3;
-//        Scanner scanner = new Scanner(System.in);
         Engine gameSix = new Engine();
         for (int i = 0; i < answersForWin; i++) {
             int randomNumber = gameSix.createRandomNumber();
 
             String question = Integer.toString(randomNumber);
             String answer = gameSix.interactionWithUser(question);
-//            gameSix.getQuestion(Integer.toString(randomNumber));
-//            String answer = scanner.nextLine();
-//            gameSix.getAnswer(answer);
             String value = getPrime(randomNumber);
 
             rightAnswer = gameSix.checkAnswer(value, answer, rightAnswer, nameOfUser);
@@ -36,9 +32,9 @@ public class Prime {
 
     private static String getPrime(int number) {
         int flagTwo = 2;
-        if (number % flagTwo == 0 && number != flagTwo || number < flagTwo) {
-            return "no";
-        }
+//        if (number % flagTwo == 0 && number != flagTwo || number < flagTwo) {
+//            return "no";
+//        }
         int divider = 1 + flagTwo;
         while (divider < number) {
             if (number % divider == 0) {

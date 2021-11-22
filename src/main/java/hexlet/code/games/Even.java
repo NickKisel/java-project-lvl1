@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-//import java.util.Scanner;
-
 public class Even {
     public static void parityCheck() {
         String nameOfUser = Cli.greetingsUser();
@@ -12,7 +10,6 @@ public class Even {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         int rightAnswer = 0;
         final int answersForWin = 3;
-//        Scanner scanner = new Scanner(System.in);
         Engine gameTwo = new Engine();
         for (int i = 0; i < answersForWin; i++) {
             int randomNumber = gameTwo.createRandomNumber();

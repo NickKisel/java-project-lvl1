@@ -2,9 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 import hexlet.code.Engine;
-
 import java.util.Random;
-//import java.util.Scanner;
 
 public class Calc {
     public static void calculation() {
@@ -15,7 +13,6 @@ public class Calc {
         final int answersForWin = 3;
         final String scrollOfMathSign = "+-*";
         final int length = scrollOfMathSign.length();
-//        Scanner scanner = new Scanner(System.in);
         Random mathSign = new Random();
         Engine gameThree = new Engine();
         for (int i = 0; i < answersForWin; i++) {
@@ -24,10 +21,7 @@ public class Calc {
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));
             String question = firstRandomNumber + " " + operator + " " + secondRandomNumber;
             String answer = gameThree.interactionWithUser(question);
-//            gameThree.getQuestion(firstRandomNumber + " " + operator + " " + secondRandomNumber);
-//            String answer = scanner.nextLine();
             String value = getValue(firstRandomNumber, secondRandomNumber, operator);
-//            gameThree.getAnswer(answer);
 
             rightAnswer = gameThree.checkAnswer(value, answer, rightAnswer, nameOfUser);
             if (rightAnswer == -1) {

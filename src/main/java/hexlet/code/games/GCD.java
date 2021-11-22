@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class GCD {
     public static void gameGCD() {
         String nameOfUser = Cli.greetingsUser();
@@ -12,7 +10,6 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
         int rightAnswer = 0;
         final int answersForWin = 3;
-        Scanner scanner = new Scanner(System.in);
         Engine gameFour = new Engine();
         for (int i = 0; i < answersForWin; i++) {
             int firstRandomNumber = gameFour.createRandomNumber();
@@ -20,10 +17,7 @@ public class GCD {
 
             String question = firstRandomNumber + " " + secondRandomNumber;
             String answer = gameFour.interactionWithUser(question);
-//            gameFour.getQuestion(question);
-//            String answer = scanner.nextLine();
             String value = Integer.toString(getGCD(firstRandomNumber, secondRandomNumber));
-//            gameFour.getAnswer(answer);
 
             rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
             if (rightAnswer == -1) {

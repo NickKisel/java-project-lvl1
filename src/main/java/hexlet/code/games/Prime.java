@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Prime {
     public static void gamePrime() {
@@ -12,14 +12,16 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         int rightAnswer = 0;
         final int answersForWin = 3;
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         Engine gameSix = new Engine();
         for (int i = 0; i < answersForWin; i++) {
             int randomNumber = gameSix.createRandomNumber();
 
-            gameSix.getQuestion(Integer.toString(randomNumber));
-            String answer = scanner.nextLine();
-            gameSix.getAnswer(answer);
+            String question = Integer.toString(randomNumber);
+            String answer = gameSix.interactionWithUser(question);
+//            gameSix.getQuestion(Integer.toString(randomNumber));
+//            String answer = scanner.nextLine();
+//            gameSix.getAnswer(answer);
             String value = getPrime(randomNumber);
 
             rightAnswer = gameSix.checkAnswer(value, answer, rightAnswer, nameOfUser);

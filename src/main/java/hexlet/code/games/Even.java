@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Even {
     public static void parityCheck() {
@@ -12,14 +12,13 @@ public class Even {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         int rightAnswer = 0;
         final int answersForWin = 3;
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         Engine gameTwo = new Engine();
         for (int i = 0; i < answersForWin; i++) {
             int randomNumber = gameTwo.createRandomNumber();
-            gameTwo.getQuestion(Integer.toString(randomNumber));
-            String answer = scanner.nextLine();
-            gameTwo.getAnswer(answer);
-            String value = yesOrNo(randomNumber);
+            String question = Integer.toString(randomNumber);
+            String answer = gameTwo.interactionWithUser(question);
+            String value = getParity(randomNumber);
 
             rightAnswer = gameTwo.checkAnswer(value, answer, rightAnswer, nameOfUser);
             if (rightAnswer == -1) {
@@ -31,7 +30,7 @@ public class Even {
         }
     }
 
-    private static String yesOrNo(int number) {
+    private static String getParity(int number) {
         if (number % 2 == 0) {
             return "yes";
         }

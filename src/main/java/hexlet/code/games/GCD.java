@@ -19,10 +19,11 @@ public class GCD {
             int secondRandomNumber = gameFour.createRandomNumber();
 
             String question = firstRandomNumber + " " + secondRandomNumber;
-            gameFour.getQuestion(question);
-            String answer = scanner.nextLine();
+            String answer = gameFour.interactionWithUser(question);
+//            gameFour.getQuestion(question);
+//            String answer = scanner.nextLine();
             String value = Integer.toString(getGCD(firstRandomNumber, secondRandomNumber));
-            gameFour.getAnswer(answer);
+//            gameFour.getAnswer(answer);
 
             rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
             if (rightAnswer == -1) {

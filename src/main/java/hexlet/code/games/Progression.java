@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Progression {
     public static void gameProgression() {
@@ -12,7 +12,7 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
         int rightAnswer = 0;
         final int answersForWin = 3;
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         Engine gameFive = new Engine();
         for (int i = 0; i < answersForWin; i++) {
             int firstElementOfArray = gameFive.createRandomNumber();
@@ -22,10 +22,12 @@ public class Progression {
             int replacement = getReplacement(strArrayOfProgression.length);
             strArrayOfProgression[replacement] = "..";
 
-            gameFive.getQuestion(printArray(strArrayOfProgression).toString());
-            String answer = scanner.nextLine();
+            String question = printArray(strArrayOfProgression).toString();
+            String answer = gameFive.interactionWithUser(question);
+//            gameFive.getQuestion(printArray(strArrayOfProgression).toString());
+//            String answer = scanner.nextLine();
             String value = Integer.toString(intArrayOfProgression[replacement]);
-            gameFive.getAnswer(answer);
+//            gameFive.getAnswer(answer);
 
             rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
             if (rightAnswer == -1) {

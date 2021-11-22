@@ -1,11 +1,21 @@
 package hexlet.code;
 
+import java.util.Scanner;
+
 public class Engine {
     public static int createRandomNumber() {
         final int lowerLine = 1;
         final int upperLine = 30;
         int randomNumber = (int) (lowerLine + Math.random() * upperLine);
         return randomNumber;
+    }
+
+    public static String interactionWithUser(String question) {
+        System.out.println("Question: " + question);
+        Scanner scannerAnswer = new Scanner(System.in);
+        String answer = scannerAnswer.nextLine();
+        System.out.println("Your answer: " + answer);
+        return answer;
     }
 
     public static int checkAnswer(String value, String answer, int rightAnswer, String nameOfUser) {
@@ -20,13 +30,13 @@ public class Engine {
         return rightAnswer;
     }
 
-    public static void getQuestion(String question) {
-        System.out.println("Question: " + question);
-    }
-
-    public static void getAnswer(String answer) {
-        System.out.println("Your answer: " + answer);
-    }
+//    public static void getQuestion(String question) {
+//        System.out.println("Question: " + question);
+//    }
+//
+//    public static void getAnswer(String answer) {
+//        System.out.println("Your answer: " + answer);
+//    }
 
     public static void congratulation(String nameOfUser) {
         System.out.println("Congratulations, " + nameOfUser + "!");

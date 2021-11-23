@@ -16,5 +16,5 @@
 <img src="https://asciinema.org/a/rETk8Symu9ZP5PPAge1iodKfu.svg" />
 </a>
 <a href="https://asciinema.org/a/1ErX8XAsO0vZIZTyLdN6ZdCBR" target="_blank">
-<img src="https://asciinema.org/a/1ErX8XAsO0vZIZTyLdN6ZdCBR" />
+<img src="https://asciinema.org/a/1ErX8XAsO0vZIZTyLdN6ZdCBR.svg" />
 </a>

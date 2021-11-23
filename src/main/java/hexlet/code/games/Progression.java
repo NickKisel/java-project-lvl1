@@ -8,10 +8,10 @@ public class Progression {
         String nameOfUser = Cli.greetingsUser();
 
         System.out.println("What number is missing in the progression?");
-        int rightAnswer = 0;
-        final int answersForWin = 3;
         Engine gameFive = new Engine();
-        for (int i = 0; i < answersForWin; i++) {
+        String[] question = new String[gameFive.CORRECT];
+        String[] value = new String[gameFive.CORRECT];
+        for (int i = 0; i < gameFive.CORRECT; i++) {
             int firstElementOfArray = gameFive.createRandomNumber();
             int progressionStep = gameFive.createRandomNumber();
             int[] intArrayOfProgression = getIntArray(firstElementOfArray, progressionStep);
@@ -19,18 +19,10 @@ public class Progression {
             int replacement = getReplacement(strArrayOfProgression.length);
             strArrayOfProgression[replacement] = "..";
 
-            String question = printArray(strArrayOfProgression).toString();
-            String answer = gameFive.interactionWithUser(question);
-            String value = Integer.toString(intArrayOfProgression[replacement]);
-
-            rightAnswer = Engine.checkAnswer(value, answer, rightAnswer, nameOfUser);
-            if (rightAnswer == -1) {
-                break;
-            }
+            question[i] = printArray(strArrayOfProgression).toString();
+            value[i] = Integer.toString(intArrayOfProgression[replacement]);
         }
-        if (rightAnswer == answersForWin) {
-            gameFive.congratulation(nameOfUser);
-        }
+        System.out.println(gameFive.checkAnswerS(question, value, nameOfUser));
     }
 
     private static int getArrayLength() {

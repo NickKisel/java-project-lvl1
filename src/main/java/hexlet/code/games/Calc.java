@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 import hexlet.code.Engine;
+
 import java.util.Random;
 
 public class Calc {
@@ -9,28 +10,21 @@ public class Calc {
         String nameOfUser = Cli.greetingsUser();
 
         System.out.println("What is the result of the expression?");
-        int rightAnswer = 0;
-        final int answersForWin = 3;
         final String scrollOfMathSign = "+-*";
         final int length = scrollOfMathSign.length();
         Random mathSign = new Random();
         Engine gameThree = new Engine();
-        for (int i = 0; i < answersForWin; i++) {
+        String[] question = new String[gameThree.CORRECT];
+        String[] value = new String[gameThree.CORRECT];
+        for (int i = 0; i < gameThree.CORRECT; i++) {
             int firstRandomNumber = gameThree.createRandomNumber();
             int secondRandomNumber = gameThree.createRandomNumber();
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));
-            String question = firstRandomNumber + " " + operator + " " + secondRandomNumber;
-            String answer = gameThree.interactionWithUser(question);
-            String value = getValue(firstRandomNumber, secondRandomNumber, operator);
 
-            rightAnswer = gameThree.checkAnswer(value, answer, rightAnswer, nameOfUser);
-            if (rightAnswer == -1) {
-                break;
-            }
+            question[i] = firstRandomNumber + " " + operator + " " + secondRandomNumber;
+            value[i] = getValue(firstRandomNumber, secondRandomNumber, operator);
         }
-        if (rightAnswer == answersForWin) {
-            gameThree.congratulation(nameOfUser);
-        }
+        System.out.println(gameThree.checkAnswerS(question, value, nameOfUser));
     }
 
     private static String getValue(int firstRandomNumber, int secondRandomNumber, char operator) {

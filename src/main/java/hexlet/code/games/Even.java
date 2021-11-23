@@ -8,23 +8,16 @@ public class Even {
         String nameOfUser = Cli.greetingsUser();
 
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-        int rightAnswer = 0;
-        final int answersForWin = 3;
         Engine gameTwo = new Engine();
-        for (int i = 0; i < answersForWin; i++) {
+        String[] question = new String[gameTwo.CORRECT];
+        String[] value = new String[gameTwo.CORRECT];
+        for (int i = 0; i < gameTwo.CORRECT; i++) {
             int randomNumber = gameTwo.createRandomNumber();
-            String question = Integer.toString(randomNumber);
-            String answer = gameTwo.interactionWithUser(question);
-            String value = getParity(randomNumber);
 
-            rightAnswer = gameTwo.checkAnswer(value, answer, rightAnswer, nameOfUser);
-            if (rightAnswer == -1) {
-                break;
-            }
+            question[i] = Integer.toString(randomNumber);
+            value[i] = getParity(randomNumber);
         }
-        if (rightAnswer == answersForWin) {
-            gameTwo.congratulation(nameOfUser);
-        }
+        System.out.println(gameTwo.checkAnswerS(question, value, nameOfUser));
     }
 
     private static String getParity(int number) {

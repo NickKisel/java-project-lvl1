@@ -8,24 +8,16 @@ public class Prime {
         String nameOfUser = Cli.greetingsUser();
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        int rightAnswer = 0;
-        final int answersForWin = 3;
         Engine gameSix = new Engine();
-        for (int i = 0; i < answersForWin; i++) {
+        String[] question = new String[gameSix.CORRECT];
+        String[] value = new String[gameSix.CORRECT];
+        for (int i = 0; i < gameSix.CORRECT; i++) {
             int randomNumber = gameSix.createRandomNumber();
 
-            String question = Integer.toString(randomNumber);
-            String answer = gameSix.interactionWithUser(question);
-            String value = getPrime(randomNumber);
-
-            rightAnswer = gameSix.checkAnswer(value, answer, rightAnswer, nameOfUser);
-            if (rightAnswer == -1) {
-                break;
-            }
+            question[i] = Integer.toString(randomNumber);
+            value[i] = getPrime(randomNumber);
         }
-        if (rightAnswer == answersForWin) {
-            gameSix.congratulation(nameOfUser);
-        }
+        System.out.println(gameSix.checkAnswerS(question, value, nameOfUser));
     }
 
     public static String getPrime(int number) {

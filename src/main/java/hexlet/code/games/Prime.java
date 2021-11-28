@@ -1,13 +1,9 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 public class Prime {
     public static void gamePrime() {
-        String nameOfUser = Cli.greetingsUser();
-
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Engine gameSix = new Engine();
         String[] question = new String[gameSix.CORRECT];
         String[] value = new String[gameSix.CORRECT];
@@ -17,7 +13,8 @@ public class Prime {
             question[i] = Integer.toString(randomNumber);
             value[i] = getPrime(randomNumber);
         }
-        System.out.println(gameSix.checkAnswerS(question, value, nameOfUser));
+        String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        gameSix.gameBuild(gameTask, question, value);
     }
 
     public static String getPrime(int number) {

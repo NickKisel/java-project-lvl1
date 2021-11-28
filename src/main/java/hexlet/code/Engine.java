@@ -5,6 +5,12 @@ import java.util.Scanner;
 public class Engine {
     public static final int CORRECT = 3;
 
+    public static void gameBuild(String gameTask, String[] question, String[] value) {
+        String nameOfUser = Cli.greetingsUser();
+        System.out.println(gameTask);
+        System.out.println(checkAnswer(question, value, nameOfUser));
+    }
+
     public static int createRandomNumber() {
         int lowerLine = 1;
         final int upperLine = 30;
@@ -12,7 +18,7 @@ public class Engine {
         return randomNumber;
     }
 
-    public static String interactionWithUser(String question) {
+    public static String getAnswer(String question) {
         System.out.println("Question: " + question);
         Scanner scannerAnswer = new Scanner(System.in);
         String answer = scannerAnswer.nextLine();
@@ -20,20 +26,16 @@ public class Engine {
         return answer;
     }
 
-    public static String checkAnswerS(String[] question, String[] value, String name) {
-        for (int i = 0; i < CORRECT; i++) { //тут 3, придумать константу
-            String answer = interactionWithUser(question[i]);
+    public static String checkAnswer(String[] question, String[] value, String nameOfUser) {
+        for (int i = 0; i < CORRECT; i++) {
+            String answer = getAnswer(question[i]);
             if (value[i].equals(answer)) {
                 System.out.println("Correct!");
             } else {
                 return "'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'"
-                        + value[i] + "'.\n" + "Let's try again, " + name + "!";
+                        + value[i] + "'.\n" + "Let's try again, " + nameOfUser + "!";
             }
         }
-        return "Congratulations, " + name + "!";
-    }
-
-    public static void congratulation(String nameOfUser) {
-        System.out.println("Congratulations, " + nameOfUser + "!");
+        return "Congratulations, " + nameOfUser + "!";
     }
 }

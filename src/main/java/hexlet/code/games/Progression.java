@@ -1,13 +1,9 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 public class Progression {
     public static void gameProgression() {
-        String nameOfUser = Cli.greetingsUser();
-
-        System.out.println("What number is missing in the progression?");
         Engine gameFive = new Engine();
         String[] question = new String[gameFive.CORRECT];
         String[] value = new String[gameFive.CORRECT];
@@ -22,7 +18,8 @@ public class Progression {
             question[i] = printArray(strArrayOfProgression).toString();
             value[i] = Integer.toString(intArrayOfProgression[replacement]);
         }
-        System.out.println(gameFive.checkAnswerS(question, value, nameOfUser));
+        String gameTask = "What number is missing in the progression?";
+        gameFive.gameBuild(gameTask, question, value);
     }
 
     private static int getArrayLength() {

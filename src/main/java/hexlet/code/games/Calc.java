@@ -1,15 +1,11 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Random;
 
 public class Calc {
     public static void calculation() {
-        String nameOfUser = Cli.greetingsUser();
-
-        System.out.println("What is the result of the expression?");
         final String scrollOfMathSign = "+-*";
         final int length = scrollOfMathSign.length();
         Random mathSign = new Random();
@@ -24,7 +20,8 @@ public class Calc {
             question[i] = firstRandomNumber + " " + operator + " " + secondRandomNumber;
             value[i] = getValue(firstRandomNumber, secondRandomNumber, operator);
         }
-        System.out.println(gameThree.checkAnswerS(question, value, nameOfUser));
+        String gameTask = "What is the result of the expression?";
+        gameThree.gameBuild(gameTask, question, value);
     }
 
     private static String getValue(int firstRandomNumber, int secondRandomNumber, char operator) {

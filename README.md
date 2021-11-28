@@ -3,18 +3,18 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bf8a73f7c16a996879c7/maintainability)](https://codeclimate.com/github/NickKisel/java-project-lvl1/maintainability)
 [![Java CI](https://github.com/NickKisel/java-project-lvl1/actions/workflows/Java-CI.yml/badge.svg)](https://github.com/NickKisel/java-project-lvl1/actions/workflows/Java-CI.yml/badge.svg)
 
-<a href="https://asciinema.org/a/aRocKEF86JGjXSHBNSbIjTDcx" target="_blank">
-<img src="https://asciinema.org/a/aRocKEF86JGjXSHBNSbIjTDcx.svg" />
+<a href="https://asciinema.org/a/OTZrSEViZ0A9dm27j6s4W9xBl" target="_blank">
+<img src="https://asciinema.org/a/OTZrSEViZ0A9dm27j6s4W9xBl.svg" />
 </a>
-<a href="https://asciinema.org/a/Olfu5Xkb1gZ5VkRsYWTW6h3A4" target="_blank">
-<img src="https://asciinema.org/a/Olfu5Xkb1gZ5VkRsYWTW6h3A4.svg" />
+<a href="https://asciinema.org/a/SWFXRRk57TfCyOwR5MKsLvBpz" target="_blank">
+<img src="https://asciinema.org/a/SWFXRRk57TfCyOwR5MKsLvBpz.svg" />
 </a>
-<a href="https://asciinema.org/a/3xwnSyxXUgObuRGhU71PPfOFF" target="_blank">
-<img src="https://asciinema.org/a/3xwnSyxXUgObuRGhU71PPfOFF.svg" />
+<a href="https://asciinema.org/a/DtsDQv6ccDYhHzjS7Mog5ZP6c" target="_blank">
+<img src="https://asciinema.org/a/DtsDQv6ccDYhHzjS7Mog5ZP6c.svg" />
 </a>
-<a href="https://asciinema.org/a/rETk8Symu9ZP5PPAge1iodKfu" target="_blank">
-<img src="https://asciinema.org/a/rETk8Symu9ZP5PPAge1iodKfu.svg" />
+<a href="https://asciinema.org/a/7lDHme0qc5VXJuQQx9YTFS9ZP" target="_blank">
+<img src="https://asciinema.org/a/7lDHme0qc5VXJuQQx9YTFS9ZP.svg" />
 </a>
-<a href="https://asciinema.org/a/1ErX8XAsO0vZIZTyLdN6ZdCBR" target="_blank">
-<img src="https://asciinema.org/a/1ErX8XAsO0vZIZTyLdN6ZdCBR.svg" />
+<a href="https://asciinema.org/a/iIQx4Bm6cWwKT9ca1OsQ4SbEW" target="_blank">
+<img src="https://asciinema.org/a/iIQx4Bm6cWwKT9ca1OsQ4SbEW.svg" />
 </a>

@@ -1,31 +1,33 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
-    public static void gamePrime() {
-        Engine gameSix = new Engine();
-        String[] question = new String[gameSix.CORRECT];
-        String[] value = new String[gameSix.CORRECT];
-        for (int i = 0; i < gameSix.CORRECT; i++) {
-            int randomNumber = gameSix.createRandomNumber();
+    private static final int UPPER_LINE = 30;
 
-            question[i] = Integer.toString(randomNumber);
-            value[i] = getPrime(randomNumber);
+    public static void gamePrime() {
+        String[] questions = new String[Engine.CORRECT];
+        String[] rightAnswers = new String[Engine.CORRECT];
+        for (int i = 0; i < Engine.CORRECT; i++) {
+            int randomNumber = Utils.createRandomNumber(1, UPPER_LINE);
+
+            questions[i] = Integer.toString(randomNumber);
+            rightAnswers[i] = getPrime(randomNumber) ? "yes" : "no";
         }
         String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        gameSix.gameBuild(gameTask, question, value);
+        Engine.gameBuild(gameTask, questions, rightAnswers);
     }
 
-    public static String getPrime(int number) {
+    public static boolean getPrime(int number) {
         int flagTwo = 2;
         int divider = 1 + flagTwo;
         while (divider < number || number < flagTwo) {
             if (number % divider == 0 || number % flagTwo == 0 || number < flagTwo) {
-                return "no";
+                return true;
             }
             divider += flagTwo;
         }
-        return "yes";
+        return false;
     }
 }

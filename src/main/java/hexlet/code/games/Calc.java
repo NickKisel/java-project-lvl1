@@ -1,44 +1,46 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Random;
 
 public class Calc {
+    private static final int UPPER_LINE = 30;
+
     public static void calculation() {
         final String scrollOfMathSign = "+-*";
         final int length = scrollOfMathSign.length();
         Random mathSign = new Random();
-        Engine gameThree = new Engine();
-        String[] question = new String[gameThree.CORRECT];
-        String[] value = new String[gameThree.CORRECT];
-        for (int i = 0; i < gameThree.CORRECT; i++) {
-            int firstRandomNumber = gameThree.createRandomNumber();
-            int secondRandomNumber = gameThree.createRandomNumber();
+        String[] questions = new String[Engine.CORRECT];
+        String[] rightAnswers = new String[Engine.CORRECT];
+        for (int i = 0; i < Engine.CORRECT; i++) {
+            int firstRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);
+            int secondRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));
 
-            question[i] = firstRandomNumber + " " + operator + " " + secondRandomNumber;
-            value[i] = getValue(firstRandomNumber, secondRandomNumber, operator);
+            questions[i] = firstRandomNumber + " " + operator + " " + secondRandomNumber;
+            rightAnswers[i] = getRightAnswer(firstRandomNumber, secondRandomNumber, operator);
         }
         String gameTask = "What is the result of the expression?";
-        gameThree.gameBuild(gameTask, question, value);
+        Engine.gameBuild(gameTask, questions, rightAnswers);
     }
 
-    private static String getValue(int firstRandomNumber, int secondRandomNumber, char operator) {
-        String value = "";
+    private static String getRightAnswer(int firstRandomNumber, int secondRandomNumber, char operator) {
+        String rightAnswer = "";
         switch (operator) {
             case '+':
-                value = Integer.toString(firstRandomNumber + secondRandomNumber);
+                rightAnswer = Integer.toString(firstRandomNumber + secondRandomNumber);
                 break;
             case '-':
-                value = Integer.toString(firstRandomNumber - secondRandomNumber);
+                rightAnswer = Integer.toString(firstRandomNumber - secondRandomNumber);
                 break;
             case '*':
-                value = Integer.toString(firstRandomNumber * secondRandomNumber);
+                rightAnswer = Integer.toString(firstRandomNumber * secondRandomNumber);
                 break;
             default:
                 break;
         }
-        return value;
+        return rightAnswer;
     }
 }

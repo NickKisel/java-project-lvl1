@@ -24,10 +24,10 @@ public class Prime {
         int divider = 1 + flagTwo;
         while (divider < number || number < flagTwo) {
             if (number % divider == 0 || number % flagTwo == 0 || number < flagTwo) {
-                return true;
+                return false;
             }
             divider += flagTwo;
         }
-        return false;
+        return true;
     }
 }

@@ -16,8 +16,8 @@ public class Progression {
         for (int i = 0; i < Engine.CORRECT; i++) {
             int firstElementOfArray = Utils.createRandomNumber(1, UPPER_LINE_FOR_NUMBER);
             int progressionStep = Utils.createRandomNumber(1, UPPER_LINE_FOR_STEP);
-            int[] intArrayOfProgression = getIntArray(firstElementOfArray, progressionStep);
-            String[] strArrayOfProgression = getStringArray(intArrayOfProgression.length, intArrayOfProgression);
+            int[] intArrayOfProgression = getIArray(firstElementOfArray, progressionStep);
+            String[] strArrayOfProgression = getSArray(intArrayOfProgression.length, intArrayOfProgression);
             int replacement = Utils.createRandomNumber(1, strArrayOfProgression.length);
             strArrayOfProgression[replacement] = "..";
 
@@ -28,21 +28,21 @@ public class Progression {
         Engine.gameBuild(gameTask, questions, rightAnswers);
     }
 
-    private static int[] getIntArray(int firstElementOfArray, int progressionStep) {
-        int[] intArray = new int[Utils.createRandomNumber(LOWER_LINE_FOR_ARRAY, UPPER_LINE_FOR_ARRAY)];
-        intArray[0] = firstElementOfArray;
-        for (int i = 1; i < intArray.length; i++) {
-            intArray[i] = intArray[i - 1] + progressionStep;
+    private static int[] getIArray(int firstElementOfArray, int progressionStep) {
+        int[] iArray = new int[Utils.createRandomNumber(LOWER_LINE_FOR_ARRAY, UPPER_LINE_FOR_ARRAY)];
+        iArray[0] = firstElementOfArray;
+        for (int i = 1; i < iArray.length; i++) {
+            iArray[i] = iArray[i - 1] + progressionStep;
         }
-        return intArray;
+        return iArray;
     }
 
-    private static String[] getStringArray(int length, int[] intArray) {
-        String[] strArray = new String[length];
-        for (int j = 0; j < strArray.length; j++) {
-            strArray[j] = Integer.toString(intArray[j]);
+    private static String[] getSArray(int length, int[] intArray) {
+        String[] sArray = new String[length];
+        for (int j = 0; j < sArray.length; j++) {
+            sArray[j] = Integer.toString(intArray[j]);
         }
-        return strArray;
+        return sArray;
     }
 
     private static StringBuilder printArray(String[] array) {

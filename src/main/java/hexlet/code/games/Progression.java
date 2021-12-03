@@ -18,7 +18,7 @@ public class Progression {
             int progressionStep = Utils.createRandomNumber(1, UPPER_LINE_FOR_STEP);
             int[] intArrayOfProgression = getIArray(firstElementOfArray, progressionStep);
             String[] strArrayOfProgression = getSArray(intArrayOfProgression.length, intArrayOfProgression);
-            int replacement = Utils.createRandomNumber(1, strArrayOfProgression.length);
+            int replacement = Utils.createRandomNumber(1, strArrayOfProgression.length - 1);
             strArrayOfProgression[replacement] = "..";
 
             questions[i] = printArray(strArrayOfProgression).toString();

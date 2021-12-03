@@ -9,6 +9,7 @@ public class Even {
     public static void parityCheck() {
         String[] questions = new String[Engine.CORRECT];
         String[] rightAnswers = new String[Engine.CORRECT];
+
         for (int i = 0; i < Engine.CORRECT; i++) {
             int randomNumber = Utils.createRandomNumber(1, UPPER_LINE);
 

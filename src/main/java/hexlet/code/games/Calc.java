@@ -14,6 +14,7 @@ public class Calc {
         Random mathSign = new Random();
         String[] questions = new String[Engine.CORRECT];
         String[] rightAnswers = new String[Engine.CORRECT];
+
         for (int i = 0; i < Engine.CORRECT; i++) {
             int firstRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);
             int secondRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);

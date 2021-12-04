@@ -12,10 +12,10 @@ public class Calc {
         final String scrollOfMathSign = "+-*";
         final int length = scrollOfMathSign.length();
         Random mathSign = new Random();
-        String[] questions = new String[Engine.CORRECT];
-        String[] rightAnswers = new String[Engine.CORRECT];
+        String[] questions = new String[Engine.COUNT_OF_ROUNDS];
+        String[] rightAnswers = new String[Engine.COUNT_OF_ROUNDS];
 
-        for (int i = 0; i < Engine.CORRECT; i++) {
+        for (int i = 0; i < Engine.COUNT_OF_ROUNDS; i++) {
             int firstRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);
             int secondRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);
             char operator = scrollOfMathSign.charAt(mathSign.nextInt(length));

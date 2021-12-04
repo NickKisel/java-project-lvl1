@@ -7,10 +7,10 @@ public class GCD {
     private static final int UPPER_LINE = 30;
 
     public static void gameGCD() {
-        String[] questions = new String[Engine.CORRECT];
-        String[] rightAnswers = new String[Engine.CORRECT];
+        String[] questions = new String[Engine.COUNT_OF_ROUNDS];
+        String[] rightAnswers = new String[Engine.COUNT_OF_ROUNDS];
 
-        for (int i = 0; i < Engine.CORRECT; i++) {
+        for (int i = 0; i < Engine.COUNT_OF_ROUNDS; i++) {
             int firstRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);
             int secondRandomNumber = Utils.createRandomNumber(1, UPPER_LINE);
 

@@ -10,10 +10,10 @@ public class Progression {
     private static final int UPPER_LINE_FOR_ARRAY = 10;
 
     public static void gameProgression() {
-        String[] questions = new String[Engine.CORRECT];
-        String[] rightAnswers = new String[Engine.CORRECT];
+        String[] questions = new String[Engine.COUNT_OF_ROUNDS];
+        String[] rightAnswers = new String[Engine.COUNT_OF_ROUNDS];
 
-        for (int i = 0; i < Engine.CORRECT; i++) {
+        for (int i = 0; i < Engine.COUNT_OF_ROUNDS; i++) {
             int firstElementOfArray = Utils.createRandomNumber(1, UPPER_LINE_FOR_NUMBER);
             int progressionStep = Utils.createRandomNumber(1, UPPER_LINE_FOR_STEP);
             int[] intArrayOfProgression = getIArray(firstElementOfArray, progressionStep);

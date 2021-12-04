@@ -7,9 +7,9 @@ public class Prime {
     private static final int UPPER_LINE = 30;
 
     public static void gamePrime() {
-        String[] questions = new String[Engine.CORRECT];
-        String[] rightAnswers = new String[Engine.CORRECT];
-        for (int i = 0; i < Engine.CORRECT; i++) {
+        String[] questions = new String[Engine.COUNT_OF_ROUNDS];
+        String[] rightAnswers = new String[Engine.COUNT_OF_ROUNDS];
+        for (int i = 0; i < Engine.COUNT_OF_ROUNDS; i++) {
             int randomNumber = Utils.createRandomNumber(1, UPPER_LINE);
 
             questions[i] = Integer.toString(randomNumber);

@@ -13,13 +13,13 @@ public class Prime {
             int randomNumber = Utils.createRandomNumber(1, UPPER_LINE);
 
             questions[i] = Integer.toString(randomNumber);
-            rightAnswers[i] = getPrime(randomNumber) ? "yes" : "no";
+            rightAnswers[i] = isPrime(randomNumber) ? "yes" : "no";
         }
         String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         Engine.gameBuild(gameTask, questions, rightAnswers);
     }
 
-    public static boolean getPrime(int number) {
+    public static boolean isPrime(int number) {
         int flagTwo = 2;
         int divider = 1 + flagTwo;
         while (divider < number || number < flagTwo) {

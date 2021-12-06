@@ -14,13 +14,13 @@ public class Even {
             int randomNumber = Utils.createRandomNumber(1, UPPER_LINE);
 
             questions[i] = Integer.toString(randomNumber);
-            rightAnswers[i] = getParity(randomNumber) ? "yes" : "no";
+            rightAnswers[i] = isEven(randomNumber) ? "yes" : "no";
         }
         String gameTask = "Answer 'yes' if number even otherwise answer 'no'.";
         Engine.gameBuild(gameTask, questions, rightAnswers);
     }
 
-    private static boolean getParity(int number) {
+    private static boolean isEven(int number) {
         return number % 2 == 0;
     }
 }
